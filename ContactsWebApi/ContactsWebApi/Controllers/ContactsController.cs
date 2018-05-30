@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using ContactsWebApi.Models;
 using ContactsWebApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactsWebApi.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/contacts")]
     public class ContactsController : Controller
